@@ -6,7 +6,12 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { CardHouseComponent } from './components/card-house/card-house.component';
-import { CardMenberComponent } from './components/card-menber/card-menber.component';
+import { HttpClientModule } from '@angular/common/http';
+import { CharacterComponent } from './components/character/character.component';
+import { FormSearchComponent } from './components/form-search/form-search.component';
+import { HousesComponent } from './views/houses/houses.component';
+import { HouseDetailsComponent } from './views/house-details/house-details.component';
+import { CharacterFilterComponent } from './views/character-filter/character-filter.component';
 
 @NgModule({
   declarations: [
@@ -14,11 +19,17 @@ import { CardMenberComponent } from './components/card-menber/card-menber.compon
     HeaderComponent,
     FooterComponent,
     CardHouseComponent,
-    CardMenberComponent
+
+    CharacterComponent,
+    FormSearchComponent,
+
+    HousesComponent,
+    HouseDetailsComponent,
+    CharacterFilterComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule, HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

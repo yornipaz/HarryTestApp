@@ -1,0 +1,26 @@
+.o-card{
+    width: 14rem;
+    height:18rem;
+    box-shadow: 0 5px 6px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    .o-card-img{
+        height: 10rem;
+        overflow: hidden
+        
+    }
+    .card-body{
+        .card-title{
+            font-weight:700;
+            color: #0e1a40;
+            text-transform: capitalize;
+        }
+        small{
+            text-transform: capitalize;
+            font-weight: 600;
+            color: #946b2d;
+        }
+        strong{
+            color:	#222f5b;
+        }
+      
+    }
+}

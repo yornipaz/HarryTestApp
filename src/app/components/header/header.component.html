@@ -1,35 +1,27 @@
-<nav class="navbar navbar-dark navbar-expand-sm  fixed-top">
+<div>
+    <nav class="navbar navbar-dark navbar-expand-sm  fixed-top">
 
 
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <a class="navbar-brand mr-auto" routerLink="/"> <img
-            src="https://fontmeme.com/permalink/210210/a62eb0dcde47ee50823c1ce44501f2d2.png" alt="logo" height="40"
-            width="80"></a>
-    <div class="collapse navbar-collapse ml-2" id="Navbar">
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item active"> <a class="nav-link" href="#"><span class="fa fa-home fa-lg"></span>
-                    Home</a> </li>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand mr-auto" routerLink="/"> <img
+                src="https://fontmeme.com/permalink/210210/a62eb0dcde47ee50823c1ce44501f2d2.png" alt="logo" height="40"
+                width="80"></a>
+        <div class="collapse navbar-collapse ml-2" id="Navbar">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active"> <a class="nav-link" routerLink="/"><span class="fa fa-home fa-lg"></span>
+                        Home</a> </li>
 
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarHouses" role="button" data-toggle="dropdown"
-                    aria-haspopup="true" aria-expanded="false">
-                    Houses
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarHouses">
-                    <a class="dropdown-item" href="#">Gryffindor</a>
-                    <a class="dropdown-item" href="#">Hufflepuff</a>
-                    <a class="dropdown-item" href="#">Ravenclaw</a>
-                    <a class="dropdown-item" href="#">Slytherin</a>
-                </div>
-            </li>
-            <li class="nav-item"> <a class="nav-link" href="./aboutus.html"><span class="fa fa-info fa-lg"></span>
-                    About me</a> </li>
-
-        </ul>
-
-    </div>
+                <li class="nav-item active"> <a class="nav-link" routerLink="/"><span class="fa fa-home fa-lg"></span>
+                        Filter</a> </li>
 
 
-</nav>
+            </ul>
+            <app-form-search></app-form-search>
+
+        </div>
+
+
+    </nav>
+</div>
