@@ -15,7 +15,7 @@ export class FormSearchComponent implements OnInit {
   ngOnInit(): void {
   }
   onSearch(search: string) {
-    if (search && search.length > 3) {
+    if (search && search.length >= 2) {
       this.router.navigate(['filter-characters'], { queryParams: { s: search } });
       //this.api.changeQuerySearch(search);
     }

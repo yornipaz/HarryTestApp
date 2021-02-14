@@ -1,3 +1,7 @@
 nav {
   background-color: #222f5b;
 }
+
+nav .o-input {
+  width: 38%;
+}

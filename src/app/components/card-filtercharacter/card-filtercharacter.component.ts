@@ -12,7 +12,9 @@ import { ApiService } from 'src/app/service/api.service';
   styleUrls: ['./card-filtercharacter.component.scss']
 })
 export class CardFiltercharacterComponent implements OnInit {
+
   querySearch: string = "";
+  alertShow: boolean = false;
   private characters: Character[] = [];
   datafill: Character[] = [];
   constructor(private api: ApiService, private route: ActivatedRoute) { }
@@ -20,6 +22,7 @@ export class CardFiltercharacterComponent implements OnInit {
   ngOnInit(): void {
     this.getQuerySearch();
     this.getDataCharacter();
+    this.alertShow = false;
   }
   private getQuerySearch(): void {
     this.route.queryParams.subscribe(params => {
@@ -35,6 +38,7 @@ export class CardFiltercharacterComponent implements OnInit {
   private getDataCharacter(): void {
     this.api.getDatCharaters("").subscribe(data => {
       this.characters = data
+      this.datafill = data
 
 
     })
@@ -47,8 +51,9 @@ export class CardFiltercharacterComponent implements OnInit {
     let filCharacter = this.characters.filter(data => data.name.split(" ")[0] === queryCapitalize
       || data.name.split(" ")[1] === queryCapitalize || data.eyeColour === query
     )
-    this.datafill = filCharacter
-    console.log(filCharacter)
+    if (query.localeCompare(" ")) { this.alertShow = filCharacter.length > 0 ? false : true }
+    this.datafill = filCharacter.length > 0 ? filCharacter : this.characters
+    console.log(this.alertShow)
 
 
   }
@@ -57,5 +62,8 @@ export class CardFiltercharacterComponent implements OnInit {
     let value = String[0].toUpperCase() + String.slice(1)
     console.log(value)
     return value;
+  }
+  closeAlert() {
+
   }
 }

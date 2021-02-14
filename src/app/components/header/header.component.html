@@ -12,14 +12,25 @@
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active"> <a class="nav-link" routerLink="/"><span class="fa fa-home fa-lg"></span>
                         Home</a> </li>
-
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" routerLink="/" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Houses
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" routerLink="/house-details/ravenclaw">Ravenclaw</a>
+                        <a class="dropdown-item" routerLink="/house-details/gryffindor">Gryffindor</a>
+                        <a class="dropdown-item" routerLink="/house-details/hufflepuff">Hufflepuff</a>
+                        <a class="dropdown-item" routerLink="/house-details/slytherin">Slytherin</a>
+                    </div>
+                </li>
                 <li class="nav-item active"> <a class="nav-link" routerLink="/filter-characters"><span
                             class="fa fa-home fa-lg"></span>
                         Filter</a> </li>
 
 
             </ul>
-            <app-form-search></app-form-search>
+            <app-form-search class="o-input"></app-form-search>
 
         </div>
 

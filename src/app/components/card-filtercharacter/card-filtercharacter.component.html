@@ -1,5 +1,15 @@
 <div class="container">
+    <div *ngIf="alertShow" class=" row alert alert-warning alert-dismissible fade show" role="alert">
+        El personaje buscado por el query de : <strong>{{querySearch}}</strong> ,no se
+        ha podido encontrar
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+
     <div class="row row-cols-1 row-cols-md-3 ">
+
+
         <div class=" col-12 col-sm-6 col-lg-3 col-xl-3 mb-3" *ngFor="let character of datafill">
 
             <div class="card text-center o-card">
@@ -8,10 +18,11 @@
                     <h5 class="card-title">{{character.name}}</h5>
                     <p class="card-text mb-2"><strong> Bold Status :</strong><small> {{
                             !character.ancestry.localeCompare("")?"Unspecified":character.ancestry}}</small></p>
+                    <h6 class="card-subtitle mb-2"><strong>Colour eyes : </strong> <small>{{
+                            !character.eyeColour.localeCompare("")?"undefined":character.eyeColour}}</small></h6>
                     <h6 class="card-subtitle mb-2 "> <strong> Species : </strong><small>{{
                             !character.species.localeCompare("")?"Unspecified":character.species}}</small></h6>
-                    <h6 class="card-subtitle mb-2"><strong>Colour eyes : </strong> <small>{{
-                            character.eyeColour}}</small></h6>
+
                     <h6 class="card-subtitle mb-2"><strong>Alive : </strong> <small>{{
                             character.alive?"Live":"Died"}}</small></h6>
 
