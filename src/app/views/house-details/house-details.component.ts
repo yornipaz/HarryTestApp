@@ -8,8 +8,8 @@ import { Router, ActivatedRoute } from '@angular/router'
   styleUrls: ['./house-details.component.scss']
 })
 export class HouseDetailsComponent implements OnInit {
-
-  endpoint: any = "/house/";
+  private ruteHouse: string = "";
+  endpoint: string = "/house/";
   constructor(private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
@@ -17,8 +17,9 @@ export class HouseDetailsComponent implements OnInit {
   }
 
   private getEnpointHouse() {
-    this.endpoint = this.endpoint + this.route.snapshot.paramMap.get('nameHouse');
-    console.log(this.endpoint)
+    this.ruteHouse = this.route.snapshot.paramMap.get('nameHouse') || "";
+    this.endpoint = this.endpoint.concat(this.ruteHouse)
+    //console.log(this.endpoint)
 
 
   }

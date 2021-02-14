@@ -1,6 +1,6 @@
 <div class="container">
     <div class="row row-cols-1 row-cols-md-3 ">
-        <div class=" col-12 col-sm-6 col-lg-3 col-xl-3 mb-3" *ngFor="let character of Characters">
+        <div class=" col-12 col-sm-6 col-lg-3 col-xl-3 mb-3" *ngFor="let character of datafill">
 
             <div class="card text-center o-card">
                 <img src={{character.image}} class="card-img-top o-card-img" alt={{character.name}}>
@@ -10,7 +10,8 @@
                             !character.ancestry.localeCompare("")?"Unspecified":character.ancestry}}</small></p>
                     <h6 class="card-subtitle mb-2 "> <strong> Species : </strong><small>{{
                             !character.species.localeCompare("")?"Unspecified":character.species}}</small></h6>
-
+                    <h6 class="card-subtitle mb-2"><strong>Colour eyes : </strong> <small>{{
+                            character.eyeColour}}</small></h6>
                     <h6 class="card-subtitle mb-2"><strong>Alive : </strong> <small>{{
                             character.alive?"Live":"Died"}}</small></h6>
 
@@ -19,4 +20,5 @@
         </div>
 
     </div>
+    <router-outlet></router-outlet>
 </div>

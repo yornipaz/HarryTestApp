@@ -1,6 +1,6 @@
-export interface House{
+export interface House {
     id: number;
     name: string;
-    imgSrc:string;
-    menbers:number;
+    imgSrc: string;
+    menbers: number;
 }

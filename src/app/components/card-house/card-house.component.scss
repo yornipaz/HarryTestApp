@@ -1,3 +1,6 @@
+$corlor-title:#0e1a40;
+$color-menbers: #946b2d;
+$font-size:.9rem;
 .o-card{
     width: 14rem;
     height:18rem;
@@ -10,17 +13,20 @@
     .card-body{
         .card-title{
             font-weight:700;
-            color: #0e1a40;
+            color: $corlor-title;
             text-transform: capitalize;
         }
         small{
-            text-transform: capitalize;
             font-weight: 600;
-            color: #946b2d;
+            color: $color-menbers;
+            font-size: $font-size;
         }
         strong{
             color:	#222f5b;
+            font-size: $font-size;
+            
         }
       
     }
 }
+

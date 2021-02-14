@@ -16,11 +16,12 @@
 }
 
 .o-card .card-body small {
-  text-transform: capitalize;
   font-weight: 600;
   color: #946b2d;
+  font-size: 0.9rem;
 }
 
 .o-card .card-body strong {
   color: #222f5b;
+  font-size: 0.9rem;
 }

@@ -12,6 +12,7 @@ import { FormSearchComponent } from './components/form-search/form-search.compon
 import { HousesComponent } from './views/houses/houses.component';
 import { HouseDetailsComponent } from './views/house-details/house-details.component';
 import { CharacterFilterComponent } from './views/character-filter/character-filter.component';
+import { CardFiltercharacterComponent } from './components/card-filtercharacter/card-filtercharacter.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { CharacterFilterComponent } from './views/character-filter/character-fil
     HousesComponent,
     HouseDetailsComponent,
     CharacterFilterComponent,
+    CardFiltercharacterComponent,
   ],
   imports: [
     BrowserModule,

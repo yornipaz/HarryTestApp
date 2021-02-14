@@ -11,7 +11,7 @@ export class CharacterComponent implements OnInit {
   public Characters: Character[] = [];
   @Input() endpoint: any
 
-  constructor(private api: ApiService) { }
+  constructor(private api: ApiService,) { }
 
   ngOnInit(): void {
     this.getCharacters(this.endpoint);

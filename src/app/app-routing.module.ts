@@ -14,7 +14,7 @@ const routes: Routes = [
 
 
   { path: 'houses', component: HousesComponent },
-  { path: 'house-details/:nameHouse', component: HouseDetailsComponent }, { path: 'filter-charathers', component: CharacterFilterComponent }];
+  { path: 'house-details/:nameHouse', component: HouseDetailsComponent }, { path: 'filter-characters', component: CharacterFilterComponent }];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
